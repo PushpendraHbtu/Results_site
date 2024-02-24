@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Marks{% endblock title%} 
+
+{%block body %}
+<div style="text-align:center">
+   <h4><a href = "home"> Home </a></h4>
+   <h3> Marks</h3>
+   
+   
+
+   <form action="updated_marks" method="post">
+   {% csrf_token %}
+     <table border="1" width="100%">
+         <tr>
+            <th> Roll No</th>
+            <th> Name</th>
+            <th> Marks </th>
+
+         </tr>
+
+      {% for i in res %}
+         <tr>
+            <td>{{i.rollno}}</td>
+            <td>{{i.sname}}</td>
+            <td><input type="number" name= "marks" placeholder="Marks"></td>
+         </tr>
+      {%endfor %}      
+       
+     
+     
+     </table>
+     <br>
+     <br>
+
+     <input type="submit" value="Update Marks"></input> 
+
+    </form>
+    {{msg}}
+   </div>
+ 
+
+
+{% endblock body%}

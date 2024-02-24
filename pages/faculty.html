@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Faculty Login{% endblock title%} 
+
+{%block body %}
+<div style="text-align:center">
+   <h3> Faculty Login</h3>
+   
+
+   <form action="flogin" method="post">
+   {% csrf_token %}
+     Username : <input type="text" name="fuser" placeholder="Enter username"> <br><br>
+     Password : <input type="password" name="fpass" placeholder="Enter password"><br>
+     <br>
+     <input type="submit" value="Login">
+
+    </form>
+    {{error}}
+   </div>
+ 
+
+
+{% endblock body%}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Updated Marks{% endblock title%} 
+
+{%block body %}
+<div style="text-align:center">
+   <h4><a href = "home"> Home </a></h4>
+   <h3>Updated Marks</h3>
+   
+   
+
+   
+     <table border="1" width="100%">
+         <tr>
+            <th> Roll No</th>
+            <th> Name</th>
+            <th> Marks </th>
+
+         </tr>
+
+      {% for i in res %}
+         <tr>
+            <td>{{i.rollno}}</td>
+            <td>{{i.sname}}</td>
+            <td>{{i.marks}}</td>
+         </tr>
+      {%endfor %}      
+       
+     
+     
+     </table>
+    
+    </form>
+    {{msg}}
+   </div>
+ 
+
+
+{% endblock body%}

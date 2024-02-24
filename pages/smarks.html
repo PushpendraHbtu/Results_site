@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Marks{% endblock title%} 
+
+{%block body %}
+<div style="text-align:center">
+   <h4><a href = "shome"> Home </a></h4>
+   <h3> Marks</h3>
+   
+   
+
+     <table border="1" width="100%">
+         <tr>
+            <th> Roll No</th>
+            <th> Name</th>
+            <th> Marks </th>
+
+         </tr>
+
+     
+         <tr>
+            <td>{{res.rollno}}</td>
+            <td>{{res.sname}}</td>
+            <td>{{res.marks}}</td>
+         </tr>
+       
+       
+     
+     
+     </table>
+    
+
+  
+    {{msg}}
+   </div>
+ 
+
+
+{% endblock body%}

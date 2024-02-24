@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Student Login{% endblock title%} 
+
+{%block body %}
+<div style="text-align:center">
+   <h3> Student Login</h3>
+   
+
+   <form action="slogin" method="post">
+   {% csrf_token %}
+      <input type="number" name="rollno" placeholder="Enter Roll No"> <br><br>
+      <input type="password" name="spass" placeholder="Enter password"><br>
+     <br>
+     <input type="submit" value="Login">
+
+    </form>
+    {{error}}
+   </div>
+ 
+
+
+{% endblock body%}

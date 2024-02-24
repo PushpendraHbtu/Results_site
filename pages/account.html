@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Create Account{% endblock title%} 
+
+{%block body %}
+<div style="text-align:center">
+   <h4><a href = "home"> Home </a></h4>
+   <h3> Create Account</h3>
+   
+   
+
+   <form action="creat_account" method="post">
+   {% csrf_token %}
+      <input type="text" name="sname" placeholder="Enter Name"> <br><br>
+      <input type="number" name="rollno" placeholder="Enter Roll No"> <br><br>
+     
+      <input type="password" name="spass" placeholder="Enter Password"><br>
+     <br>
+     <input type="submit" value="Create Account">
+
+    </form>
+    {{msg}}
+   </div>
+ 
+
+
+{% endblock body%}
